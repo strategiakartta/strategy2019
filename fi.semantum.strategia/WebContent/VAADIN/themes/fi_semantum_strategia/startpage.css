@@ -1,0 +1,132 @@
+.extra-small-font {
+	font-size: 10px;
+}
+
+.mainToolBar {
+	border-radius: 1px;
+	border: 1px solid #aaaaaa;
+	background-color: #f2f2f2;
+}
+
+/*Start page styles:*/
+.startPageClass strong {
+	font-weight: bold;
+}
+
+.yearClockEventLabel large {
+	font-size: 18px;
+}
+
+.yearClockEventLabel medium {
+	font-size: 14px;
+	font-weight: bold;
+}
+.yearClockEventLabel small {
+	font-size: 12px;
+}
+
+.yearClockEventLabel {
+	border-radius: 1px;
+	border: 1px solid #7f7f7f;
+	
+	font-family: helvetica;
+	text-align: center !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	display: block !important;
+	align-items: center !important;
+	
+	overflow-y: auto;
+	overflow-x: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 18px;
+    min-height: 80px;
+    max-height: 110px;
+    -webkit-box-orient: vertical;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 4px;
+}
+
+.yearClockEventLabel-none {  }
+.yearClockEventLabel-purple { background-color: #cfaaff !important; }
+.yearClockEventLabel-yellow { background-color: #ffffcf !important; }
+.yearClockEventLabel-orange { background-color: #ffcfaa !important; }
+.yearClockEventLabel-red { background-color: #ffcfcf !important; }
+.yearClockEventLabel-green {	background-color: #cfffcf !important; }
+.yearClockEventLabel-blue { background-color: #bbbbff !important; }
+.yearClockEventLabel-grey { background-color: #cfcfcf !important; }
+
+.yearClockSummaryTable .v-table-row-purple { background-color: #cfaaff !important; }
+.yearClockSummaryTable .v-table-row-yellow { background-color: #ffffcf !important; }
+.yearClockSummaryTable .v-table-row-orange { background-color: #ffcfaa !important; }
+.yearClockSummaryTable .v-table-row-red { background-color: #ffcfcf !important; }
+.yearClockSummaryTable .v-table-row-green {	background-color: #cfffcf !important; }
+.yearClockSummaryTable .v-table-row-blue { background-color: #bbbbff !important; }
+.yearClockSummaryTable .v-table-row-grey { background-color: #cfcfcf !important; }
+
+.yearClockSummaryTable .v-table-header-cell {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+}
+
+.yearClockSummaryTable {
+	margin-bottom: 50px;
+}
+
+.yearClockSummaryTable .v-table-caption-container {
+	min-width: 120px !important;
+}
+.yearClockSummaryTable td {
+	min-width: 120px !important;
+	white-space: normal !important;
+	
+	height: auto !important;
+	padding-top: 6px !important;
+	padding-bottom: 8px !important;
+}
+
+.yearClockLayout {
+	min-height: 100px !important;
+}
+
+.startPageExternalLink {
+	background: #e2e2e2;
+	padding: 5px;
+	border-radius: 4px;
+	border: 1px solid grey;
+	text-align: left;
+	align-items: center;
+}
+
+.startPageClass {
+	margin: 1cm auto;
+	background: #fff;
+	box-shadow: 0 0 10px rgba(50, 50, 50, 0.4);
+	outline: 0;
+	padding-left: 2cm;
+	padding-top: 2cm;
+	padding-right: 2cm;
+	padding-bottom: 2cm;
+	-moz-user-select: text;
+	-webkit-user-select: text;
+	-ms-user-select: text;
+}
+
+@startPageClass {
+	margin-left: 2cm;
+	margin-top: 2cm;
+	margin-right: 2cm;
+	margin-bottom: 2cm;
+	orphans: 4;
+	widows: 2;
+}
+
+.startPageClass table, .startPageClass th, .startPageClass td {
+	border-collapse: collapse;
+	border: 1px solid black;
+	word-wrap: break-word;
+	width: 100%;
+	table-layout: fixed;
+}

@@ -1,0 +1,163 @@
+/*!
+ * HTML-Sheets-of-Paper (https://github.com/delight-im/HTML-Sheets-of-Paper)
+ * Copyright (c) delight.im (https://www.delight.im/)
+ * Licensed under the MIT License (https://opensource.org/licenses/MIT)
+The MIT License (MIT)
+
+Copyright (c) delight.im (https://www.delight.im/)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+ */
+
+/* Show markdown strong font as bold*/
+.a4page strong {
+	font-weight: bold;
+}
+
+.a4page html, .a4page body{
+	/* Reset the document's margin values */
+	margin: 0;
+	/* Reset the document's padding values */
+	padding: 0;
+	/* Use the platform's native font as the default */
+	font-family: "Roboto", -apple-system, "San Francisco", "Segoe UI", "Helvetica Neue", sans-serif;
+	/* Define a reasonable base font size */
+	font-size: 12pt;
+
+	/* Styles for better appearance on screens only -- are reset to defaults in print styles later */
+
+	/* Use a non-white background color to make the content areas stick out from the full page box */
+	background-color: #eee;
+}
+/* Styles that are shared by all elements */
+* {
+	/* Include the content box as well as padding and border for precise definitions */
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+
+.customDocumentLayout {
+	display: block !important;
+}
+
+.a4page {
+	/* Styles for better appearance on screens only -- are reset to defaults in print styles later */
+
+	/* Divide single pages with some space and center all pages horizontally */
+	
+	margin: 1cm auto;
+	
+	/* Define a white paper background that sticks out from the darker overall background */
+	background: #fff;
+	/* Show a drop shadow beneath each page */
+	box-shadow: 0 0 10px rgba(50, 50, 50, 0.4);
+	/* Override outline from user agent stylesheets */
+	outline: 0;
+}
+
+/* Defines a class for manual page breaks via inserted .page-break element */
+.a4page div.page-break {
+	page-break-after: always;
+}
+
+/* For all headings */
+.a4page h1, .a4page h2, .a4page h3, .a4page h4, .a4page h5, .a4page h6 {
+	/* Avoid page breaks immediately */
+	page-break-after: avoid;
+}
+/* For all paragraph tags */
+.a4page p{
+	/* Reset the margin so that the text starts and ends at the expected marks */
+	margin: 0;
+}
+/* For adjacent paragraph tags */
+.a4page p + p {
+	/* Restore the spacing between the paragraphs */
+	margin-top: 0.5cm;
+}
+/* For links in the document */
+.a4page a {
+	/* Prevent colorization or decoration */
+	text-decoration: none;
+	color: black;
+}
+
+/* For tables in the document */
+.a4page table {
+	page-break-inside: auto;
+	width: 17cm;
+	table-layout: fixed;
+}
+
+/* For tables in the document */
+.a4page table, .a4page th, .a4page td {
+	/* Avoid page breaks inside */
+	border-collapse: collapse;
+	border: 1px solid black;
+	word-wrap: break-word;
+	font-size: 8pt;
+}
+
+.a4Page tr {
+	page-break-inside:avoid;
+	page-break-after:auto;
+}
+
+/* Use CSS Paged Media to switch from continuous documents to sheet-like documents with separate pages */
+@a4page {
+	/* You can only change the size, margins, orphans, widows and page breaks here */
+
+	/* Require that at least this many lines of a paragraph must be left at the bottom of a page */
+	orphans: 4;
+	/* Require that at least this many lines of a paragraph must be left at the top of a new page */
+	widows: 2;
+}
+/* When the document is actually printed */
+@media print {
+	.a4page html, .a4page body {
+		/* Reset the document's background color */
+		background-color: #fff;
+	}
+	
+	/*
+	Firefox work-around for printing 
+	By putting this tiny margin on the left of the printed table, we're able to see the left border
+	correctly. However, this causes the lines to appear non-connected (since everything shifts to the right)
+	*/
+	.a4page table {	margin-left: 1px !important; }
+	.a4page table table { margin-left: 0px !important; }
+	
+	.a4page {
+		/* Reset all page styles that have been for better screen appearance only */
+		/* Break cascading by using the !important rule */
+		/* These resets are absolute must-haves for the print styles and the specificity may be higher elsewhere */
+		width: initial !important;
+		min-height: initial !important;
+		margin: 0 !important; 
+		padding: 0 !important;
+		border: initial !important;
+		border-radius: initial !important;
+		background: initial !important;
+		box-shadow: initial !important;
+		
+		/* Force page breaks after each .page element of the document */
+		page-break-after: always;
+		color-adjust: exact;
+	}
+}

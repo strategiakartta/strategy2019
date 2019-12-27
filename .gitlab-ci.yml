@@ -1,0 +1,35 @@
+variables:
+  LATEST_IMAGE_NAME: "$DOCKER_REGISTRY/$IMAGE_NAME:latest"
+  CURRENT_IMAGE_NAME: "$DOCKER_REGISTRY/$IMAGE_NAME:$CI_COMMIT_SHA"
+  ESCAPED_CICD_USERNAME: $REGISTRYUSERNAME
+  ALT_CICD_IMAGE_NAME: "$REPO_SIMUPEDIA_COM/$IMAGE_NAME:latest"
+  ALT_CICD_USERNAME: "$REPO_SIMUPEDIA_COM_USERNAME"
+  ALT_CICD_PASSWORD: "$REPO_SIMUPEDIA_COM_PASSWORD"
+
+#Build any other branch settings (but never push)
+build-all:
+  image: gitlab/dind:latest
+  stage: build
+  tags:
+  - dind
+  script:
+    - docker build -t "localbuild:latest" .
+  except:
+    - master
+
+#Build the master and push to registry
+build-master:
+  image: gitlab/dind:latest
+  stage: build
+  tags:
+  - dind
+  script:
+    #Login with pull and PUSH username and password (protected)
+    - docker login -u "$ESCAPED_CICD_USERNAME" -p "$REGISTRYPASSWORD" "https://$DOCKER_REGISTRY"
+    - docker login -u "$ALT_CICD_USERNAME" -p "$ALT_CICD_PASSWORD" "https://$REPO_SIMUPEDIA_COM"
+    - docker build -t "$LATEST_IMAGE_NAME" -t "$CURRENT_IMAGE_NAME" -t "$ALT_CICD_IMAGE_NAME" .
+    - docker push "$LATEST_IMAGE_NAME"
+    - docker push "$CURRENT_IMAGE_NAME"
+    - docker push "$ALT_CICD_IMAGE_NAME"
+  only:
+    - master

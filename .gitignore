@@ -1,0 +1,23 @@
+# Dev Database
+strategia-db
+/strategia-db/
+
+# Vaadin build
+/build/result
+/build/gwt
+/build/checkout
+/build/classes
+/build/test-output
+/build/integration-test-output
+/build/buildhelpers/com/vaadin/buildhelpers/*.class
+
+# Eclipse
+.settings
+/.settings/
+org.eclipse.jdt.core.prefs
+
+# Misc
+bin
+/bin/
+target
+/target/

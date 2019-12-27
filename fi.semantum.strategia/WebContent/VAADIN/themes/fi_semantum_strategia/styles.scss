@@ -1,0 +1,470 @@
+/*******************************************************************************
+ * Copyright (c) 2014 Ministry of Transport and Communications (Finland).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *     Semantum Oy - initial API and implementation
+ *******************************************************************************/
+
+@import url("sheets-of-paper-a4.css");
+@import url("comment-tool.css");
+@import url("startpage.css");
+@import "addons.scss";
+@import "fi_semantum_strategia.scss";
+
+/* This file prefixes all rules with the theme name to avoid causing conflicts with other themes. */
+/* The actual styles should be defined in fi_semantum_strategia.scss */
+.fi_semantum_strategia {
+  @include addons;
+  @include fi_semantum_strategia;
+}
+
+#searchTextField {
+	background-color: #ccc;
+}
+
+#loginPasswordField {
+	background-color: #ccc;
+}
+
+#loginUsernameField {
+	background-color: #ccc;
+}
+
+div.oddProperty {
+    background-color: #dadada;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+div.evenProperty {
+    background-color: #f2f2f2;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+        div.v-app.fi_semantum_strategia {
+            font-family: "Verdana", "Chewy", "Indie Flower", "Open Sans", Candara, Optima, Arial, sans-serif;
+		}
+
+        body {
+            overflow: hidden;
+            margin: 0;
+            font-size: 12px;
+        }
+
+        .footer {
+            z-index: 1;
+            display: block;
+            font-size: 26px;
+            font-weight: 200;
+            text-shadow: 0 1px 0 #fff;
+        }
+
+        svg {
+            overflow: hidden;
+        }
+
+        rect {
+            stroke: #EEEEEE;
+        }
+
+        .label {
+            stroke: #000000;
+            fill: #000000;
+            stroke-width: 0;
+            margin: 2px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .parent .label {
+            font-size: 12px;
+            stroke: #FFFFFF;
+            fill: #FFFFFF;
+        }
+
+        .child .label {
+            font-size: 11px;
+        }
+
+		rect.visio {
+			stroke-width: 0;
+			stroke: #000000;
+			fill: rgb(3,78,162);
+		}
+
+		rect.tavoite {
+			stroke-width: 0;
+			stroke: #000000;
+			fill: rgb(240,249,255);
+		}
+
+		rect.painopiste {
+			stroke-width: 0;
+			stroke: rgb(0,78,105);
+			fill: rgb(255,255,255);
+		}
+
+        text.header {
+            font-size: 12px;
+            /*text-decoration: underline;*/
+        }
+
+        text.visio.label {
+            font-size: 9px;
+            text-anchor: middle;
+			fill: rgb(255,255,255);
+        }
+
+        text.visio.edit {
+            font-size: 11px;
+            text-anchor: middle;
+			fill: rgb(255,255,255);
+        }
+
+        text.selectMap {
+            font-size: 9px;
+            cursor: pointer;
+            /*text-decoration: underline;*/
+			fill: rgb(42,0,255);
+        }
+
+        text.selectScope {
+            font-size: 9px;
+            cursor: pointer;
+            text-decoration: underline;
+			fill: rgb(42,0,255);
+        }
+
+        text.uusiTavoite {
+            font-size: 9px;
+        }
+
+        text.alas {
+            font-size: 12px;
+            text-anchor: middle;
+        }
+
+        text.tavoiteTag {
+            font-size: 7px;
+        }
+
+        text.painopisteTag {
+            font-size: 6px;
+        }
+
+        text.painopisteMeter {
+            font-size: 8px;
+        }
+
+        text.innerBoxExtraText {
+            text-anchor: middle;
+            font-size: 6px;
+        }
+
+        text.innerBoxExtraId {
+            text-anchor: middle;
+            font-size: 5px;
+        }
+
+        text.tavoiteMeter {
+            font-size: 8px;
+        }
+
+        text.tavoite.idElement {
+            font-size: 7px;
+            text-anchor: middle;
+        }
+
+        text.tavoite.textElement {
+            font-size: 10px;
+            text-anchor: middle;
+        }
+
+        text.tavoite.FontAwesome {
+            font-size: 11px;
+            cursor: pointer;
+        }
+
+        text.painopiste.idElement {
+            font-size: 6px;
+            text-anchor: middle;
+        }
+
+        text.painopiste.FontAwesome {
+            font-size: 7px;
+            cursor: pointer;
+        }
+
+        text.painopiste.textElement {
+            font-size: 9px;
+            text-anchor: middle;
+        }
+
+        text.alikartta.link {
+            font-size: 11px;
+            text-anchor: middle;
+        }
+
+        text.alikartta.FontAwesome {
+            cursor: pointer;
+        }
+
+        text.parent.link {
+            font-size: 10px;
+        }
+
+        path.header {
+            stroke-width: 2;
+            stroke: #000000;
+        }
+
+        path.visio {
+            stroke-width: 2;
+            stroke: #000000;
+			fill: rgb(0,0,80);
+        }
+
+		text.uusiAliorganisaatio {
+            font-size: 9px;
+		}
+
+        .remove {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .add {
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .link {
+            cursor: pointer;
+            /*text-decoration: underline;*/
+			fill: rgb(42,0,255);
+        }
+        
+        div.v-app.fi_semantum_strategia {
+ 		   background-color: #FFFFFF;
+		}
+		
+		.removeIcon .v-icon {
+        color: red;
+        font-size: 28px;
+        line-height: 0px;
+        }
+
+        div.propertyName.v-label.v-label-propertyName {
+        color: rgb(42,0,255);
+        font-size: 20px;
+        }
+        
+.fi_semantum_strategia .v-margin-top {
+	padding-top: 8px;
+}
+ .fi_semantum_strategia .v-margin-left {
+	padding-left: 12px;
+}
+ .fi_semantum_strategia .v-margin-right {
+	padding-right: 12px;
+}
+
+.v-margin-bottom {
+	padding-bottom: 8px;
+}
+
+.noLineHeight {
+    line-height: 0px !important;
+}
+
+div.redMeter.v-label.v-label-redMeter {
+color: rgb(240,10,10);
+font-size: 22px;
+}
+
+div.greenMeter.v-label.v-label-greenMeter {
+color: rgb(10,240,10);
+font-size: 22px;
+}
+
+div.yellowMeter.v-label.v-label-yellowMeter {
+color: rgb(220,197,30);
+font-size: 22px;
+}
+
+div.redBlock {
+    background-color: #ff5959;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+div.yellowBlock {
+    background-color: #fff200;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+div.greenBlock {
+    background-color: #45A62D;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+div.propertyHeader {
+    text-align: center;
+}
+
+div.menuHeader {
+    text-align: center;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+
+div.v-button.redButton {
+    box-shadow:none; 
+    color: #000000; 
+    background: #f88;
+}
+
+.fi_semantum_strategia div.v-button.redButton {
+    box-shadow:none; 
+    color: #000000; 
+    background: #ebb;
+    opacity: 1.0;
+}
+
+.fi_semantum_strategia div.v-button.greenButton {
+    box-shadow:none; 
+    color: #000000; 
+    background: #beb;
+    opacity: 1.0;
+}
+
+text.fixed {
+  font-size: 50px;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	display: inline-block;
+	text-align: center;
+}
+
+text.required {
+  font-size: 50px;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	display: inline-block;
+	text-align: center;
+}
+
+text.infoElement {
+  font-size: 12px;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	display: inline-block;
+	text-align: center;
+}
+
+text.meterElement {
+  font-size: 12px;
+	font-family: FontAwesome;
+	font-style: normal;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	display: inline-block;
+	text-align: center;
+}
+
+.fi_semantum_strategia div.v-label.editMode {
+    background: #e88;
+    padding: 2px;
+    text-align: center;
+}
+
+.fi_semantum_strategia div.v-label.viewMode {
+    background: #9be;
+    padding: 2px;
+    text-align: center;
+}
+
+div.tooltip {
+    font-family: "Verdana", "Chewy", "Indie Flower", "Open Sans", Candara, Optima, Arial, sans-serif;
+    font-size: 14px;
+}
+
+div.v-slot-outerInputTable {
+    margin-top : 2px;
+	margin-left : 10px;
+    margin-right : 10px;
+}
+
+/* Override the slider drag-caption to be hidden! */
+.v-slider-feedback {
+	background-color: #ffffff !important;
+	background-color: rgba(50, 50, 50, 0.0) !important;
+	-webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.0) !important;
+	box-shadow: 0 0px 0px rgba(0, 0, 0, 0.0) !important;
+	padding: 0px 0px !important;
+	border-radius: 0px !important;
+	max-width: 0px !important;
+	overflow: hidden !important;
+	font-size: 0px !important;
+}
+
+div.v-slot-innerInputTable {
+    margin-top : 2px;
+	margin-left : 30px;
+    margin-right : 10px;
+}
+
+.mapTreeTableBrowser {
+	min-width: 300px !important;
+}
+
+.mapTreeTableBrowser td {
+	min-width: 300px !important;
+	white-space: normal !important;
+	
+	height: auto !important;
+	padding-top: 6px !important;
+	padding-bottom: 8px !important;
+}
+
+.mapTreeTableBrowser .v-table-header-cell {
+	min-width: 300px !important;
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+}
+
+.mapTreeTableBrowser tr.v-table-row-can-navigate {
+    text-decoration: underline;
+}
+
+
+        

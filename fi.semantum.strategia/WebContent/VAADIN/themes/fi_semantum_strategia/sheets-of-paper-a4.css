@@ -1,0 +1,66 @@
+/*!
+ * HTML-Sheets-of-Paper (https://github.com/delight-im/HTML-Sheets-of-Paper)
+ * Copyright (c) delight.im (https://www.delight.im/)
+ * Licensed under the MIT License (https://opensource.org/licenses/MIT)
+The MIT License (MIT)
+
+Copyright (c) delight.im (https://www.delight.im/)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+ */
+
+@import "sheets-of-paper.css";
+
+.a4page {
+	/* Styles for better appearance on screens only -- are reset to defaults in print styles later */
+
+	/* Reflect the paper width in the screen rendering (must match size from @page rule) */
+	width: 21cm;
+	/* Reflect the paper height in the screen rendering (must match size from @page rule) */
+	min-height: 29.7cm;
+
+	/* Reflect the actual page margin/padding on paper in the screen rendering (must match margin from @page rule) */
+	padding-left: 2cm;
+	padding-top: 2cm;
+	padding-right: 2cm;
+	padding-bottom: 2cm;
+	
+	overflow: auto;
+	
+	-moz-user-select: text;
+	-webkit-user-select: text;
+	-ms-user-select: text;
+	-webkit-print-color-adjust: exact;
+}
+
+/* Use CSS Paged Media to switch from continuous documents to sheet-like documents with separate pages */
+@a4page {
+	/* You can only change the size, margins, orphans, widows and page breaks here */
+
+	/* Paper size and page orientation */
+	size: A4 portrait;
+	
+	/* Margin per single side of the page */
+	margin-left: 2cm;
+	margin-top: 2cm;
+	margin-right: 2cm;
+	margin-bottom: 2cm;
+	
+	overflow: auto;
+}

@@ -1,0 +1,44 @@
+/*******************************************************************************
+ * Copyright (c) 2014 Ministry of Transport and Communications (Finland).
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *     Semantum Oy - initial API and implementation
+ *******************************************************************************/
+
+/* Import the reindeer theme.*/
+/* This only allows us to use the mixins defined in it and does not add any styles by itself. */
+@import "../valo/valo";   
+
+/* This contains all of your theme.*/
+/* If somebody wants to extend the theme she will include this mixin. */
+@mixin fi_semantum_strategia {
+  /* Include all the styles from the reindeer theme */
+  @include valo;
+
+  /* Insert your theme rules here */
+  
+  .v-tree-node-puuttuu {
+    font-weight: bold;
+    color: #D0300F;
+  }
+  
+  .v-tree-node-current {
+    font-weight: bold;
+    color: #07407F;
+  }      
+  
+  .v-tree-node-normaali {
+    font-weight: normal;
+    color: #07d007;
+  }      
+
+  .v-tree-node-rakenne {
+    font-weight: normal;
+    color: #070707;
+  }
+
+}

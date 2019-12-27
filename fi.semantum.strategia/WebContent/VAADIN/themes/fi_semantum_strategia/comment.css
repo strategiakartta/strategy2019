@@ -1,0 +1,18 @@
+.comment {
+	white-space: pre-wrap;
+	word-wrap: break-word !important;
+	border-radius: 1px;
+	border: 1px solid #121212;
+	
+	overflow-y: auto;
+	overflow-x: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 20px;
+    max-height: 500px;
+    -webkit-box-orient: vertical;
+}
+
+.comment b {
+	font-weight: bold;
+}

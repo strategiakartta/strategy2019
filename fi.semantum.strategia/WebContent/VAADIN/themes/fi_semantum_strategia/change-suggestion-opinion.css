@@ -1,0 +1,116 @@
+.changeSuggestionOpinion html, .changeSuggestionOpinion body{
+}
+/* Styles that are shared by all elements */
+* {
+}
+
+/* This element contains the other changeSuggestionOpinions - one per office that is related to the ChangeSuggestion */
+.changeSuggestionOpinionRoot {
+	overflow: auto;
+}
+
+.changeSuggestionOpinionSection {
+	min-width: 250px !important;
+	border-radius: 1px;
+	border: 1px solid #121212;
+}
+
+.changeSuggestionOpinion {
+	text-align: center !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	display: block !important;
+	align-items: center !important;
+	
+	font-weight: bold;
+	font-size: 12px;
+}
+
+.changeSuggestionOpinionStateIconGreen .v-icon {
+	color:green !important;
+}
+.changeSuggestionOpinionStateIconGrey .v-icon {
+	color:grey !important;
+}
+.changeSuggestionOpinionStateIconRed .v-icon {
+	color:red !important;
+}
+.changeSuggestionOpinionStateIconYellow .v-icon {
+	color:#f4f400 !important;
+}
+
+.changeSuggestionOpinionStateWhite {
+	background:white !important;
+	font-weight: bold !important;
+}
+
+.changeSuggestionOpinionStateGreen {
+	background:green !important;
+	font-weight: bold !important;
+	color: black !important;
+}
+
+.changeSuggestionOpinionStateGrey {
+	background:grey !important;
+	font-weight: bold !important;
+	color: black !important;
+}
+
+.changeSuggestionOpinionStateRed {
+	background:red !important;
+	font-weight: bold !important;
+	color: black !important;
+}
+
+.changeSuggestionOpinionStateYellow {
+	background:#f4f400 !important;
+	font-weight: bold !important;
+	color: black !important;
+}
+
+.changeSuggestionOpinionComboBox {
+}
+
+.changeSuggestionOpinionBody {
+	white-space: pre-line !important;
+	
+	text-align: left !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	display: block !important;
+	align-items: center !important;
+	font-size: 12px;
+	
+	overflow-y: auto;
+	overflow-x: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 16px;
+    max-height: 192px;
+    -webkit-box-orient: vertical;
+}
+
+.changeSuggestionOpinion div {
+	font-size: 11px;
+}
+
+.changeSuggestionOpinion h1{
+}
+
+.changeSuggestionOpinion p {
+}
+.changeSuggestionOpinion p + p {
+}
+
+.changeSuggestionOpinion a {
+}
+
+.changeSuggestionOpinion table {
+}
+
+.changeSuggestionOpinion table, .changeSuggestionOpinion th, .changeSuggestionOpinion td {
+}
+
+@changeSuggestionOpinion {
+	/* You can only change the size, margins, orphans, widows and page breaks here */
+}

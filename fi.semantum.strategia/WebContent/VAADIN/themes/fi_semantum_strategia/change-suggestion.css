@@ -1,0 +1,85 @@
+.changeSuggestion html, .changeSuggestion body{
+}
+/* Styles that are shared by all elements */
+* {
+}
+
+.changeSuggestion .changeSuggestionTableLayout td {
+	min-width: 50px !important;
+	white-space: normal !important;
+	
+	height: auto !important;
+	padding-top: 6px !important;
+	padding-bottom: 8px !important;
+}
+
+.changeSuggestion .changeSuggestionTableLayout .v-table-header-cell {
+	padding-top: 0px !important;
+	padding-bottom: 0px !important;
+}
+
+.changeSuggestion {
+	text-align: left !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	display: block !important;
+	align-items: center !important;
+	font-size: 12px;
+	
+	overflow-y: auto;
+	overflow-x: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 14px;
+    max-height: 280px;
+    -webkit-box-orient: vertical;
+}
+
+.changeSuggestionMetadata {
+	text-align: center !important;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	display: block !important;
+	align-items: center !important;
+	font-size: 12px;
+	
+	overflow-y: auto;
+	overflow-x: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    line-height: 15px;
+    max-height: 90px;
+    -webkit-box-orient: vertical;
+    
+}
+
+.changeSuggestionMetadata bold {
+	font-weight: bold;
+}
+
+.changeSuggestion div {
+	font-size: 12px;
+}
+
+.changeSuggestion bold {
+	font-weight: bold;
+}
+
+.changeSuggestion p {
+}
+
+.changeSuggestion p + p {
+}
+
+.changeSuggestion a {
+}
+
+.changeSuggestion table {
+}
+
+.changeSuggestion table, .changeSuggestion th, .changeSuggestion td {
+}
+
+@changeSuggestion {
+	/* You can only change the size, margins, orphans, widows and page breaks here */
+}

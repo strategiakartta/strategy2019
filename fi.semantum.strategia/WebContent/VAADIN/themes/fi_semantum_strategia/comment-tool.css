@@ -1,0 +1,34 @@
+@import url("comment.css");
+@import url("change-suggestion.css");
+@import url("change-suggestion-opinion.css");
+
+.commentTool {
+	border-radius: 5px;
+	border: 2px solid #121212;
+}
+
+.changeSuggestionNavigationElement {
+	margin-top: 1px;
+	margin-bottom: 2px;
+	min-height: 28px !important;
+	text-align: left !important;
+	font-size: 12px !important;
+	white-space: normal !important;
+	height: auto !important;
+	border-radius: 4px;
+	background: #egegeg;
+	border: 2px solid #121212;
+	cursor: pointer;
+}
+
+.changeSuggestionNavigationElement:hover {
+	background: #dfdfdf;
+}
+
+.changeSuggestionNavigationElement .v-icon {
+	font-size: 16px;
+}
+
+.overflow-auto {
+	overflow: auto !important;
+}
